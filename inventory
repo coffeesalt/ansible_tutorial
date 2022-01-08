@@ -1,5 +1,5 @@
-172.16.41.51
-172.16.41.52
-172.16.41.53
-172.16.41.54
-172.16.41.55
+172.16.41.51 apache_package=apache2 php_package=libapache2-mod-php
+172.16.41.52 apache_package=apache2 php_package=libapache2-mod-php
+172.16.41.53 apache_package=apache2 php_package=libapache2-mod-php
+172.16.41.54 apache_package=apache2 php_package=libapache2-mod-php
+172.16.41.55 apache_package=httpd php_package=php
