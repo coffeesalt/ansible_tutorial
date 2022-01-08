@@ -1,0 +1,23 @@
+---
+
+- hosts: apt
+  become: true
+  pre_tasks:
+
+  - name: install updates (debain and ubuntu)
+    package:
+      update_cache: yes
+
+- hosts: apt
+  become: true
+  tasks:
+
+  - name: install htop, neofetch, ncdu and tmux (debian and ubuntu)
+    package:
+      name:
+        - htop
+        - neofetch
+        - ncdu
+        - vim
+        - tmux
+      state: latest
