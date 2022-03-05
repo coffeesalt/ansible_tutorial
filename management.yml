@@ -1,18 +1,28 @@
 ---
 
-- hosts: apt
+- hosts: apt,dnf
   become: true
   pre_tasks:
 
-  - name: install updates (debain and ubuntu)
+  - name: install updates (debain, ubuntu & centos)
     package:
       update_cache: yes
 
-- hosts: apt
+- hosts: dnf
+  become: true
+  pre_tasks:
+
+  - name: install epel-release (centos)
+    package:
+      name:
+        - epel-release
+      state: latest
+
+- hosts: apt,dnf
   become: true
   tasks:
 
-  - name: install htop, neofetch, ncdu and tmux (debian and ubuntu)
+  - name: install htop, neofetch, ncdu, vim & tmux (debian, ubuntu & centos)
     package:
       name:
         - htop
